@@ -11,6 +11,8 @@ jobs:
         run: echo "SOMEVAR=hello" > $GITHUB_ENV
       - name: usevar
         run: echo "var is $SOMEVAR"
+        env:
+          SOMEVAR: $SOMEVAR
   use_variable:
     runs-on: ubuntu-latest
     needs: initialize_variable
