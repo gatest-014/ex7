@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: setvar
-        run: echo "SOMEVAR=hello" > $GITHUB_ENV
+        run: echo "SOMEVAR=hello" >> $GITHUB_ENV
       - name: usevar
         run: echo "var is $SOMEVAR"
         env:
